@@ -606,6 +606,10 @@ img{
     margin-top: -25px;
 }
 
+.discover-more:hover{
+    color: gray;
+}
+
 /* solution cards style end */
 
 
@@ -738,6 +742,12 @@ img{
     padding: 13px 30px;
     margin-bottom: 50px;
 }
+
+.discover-our-process-link:hover{
+    color: lightgray;
+    text-decoration: none;
+}
+
 .discover-our-process-link{
     font-weight: bold;
     font-size: 21.88px;
