@@ -1,0 +1,1615 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}    
+
+body {
+    font-family: 'Assistant', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #252437;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* header style */
+
+.wrapper{
+    max-width: 2560px;
+    height: auto;
+    background: #252437;  
+    margin: 0 auto;
+    padding-bottom: 102px;
+}
+
+.header-wrapper{
+    max-width: 2560px;
+    background-color: #252437;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header-logo-vector{
+    padding-bottom: 3px;
+}
+
+.header-logo{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    
+}
+
+.header-logo:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+.header-nav{
+   padding-top: 10px;
+}
+
+.nav-item{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-item:last-child{
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: 14px;
+    margin-left: 4px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 22px;
+    text-decoration: none;
+}
+
+.nav-item:last-child:hover{
+    color: gray;
+    text-decoration: none;
+    background-color: white;
+}
+
+.nav-link{
+    font-size: 17.5px;
+    line-height: 23px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.nav-link:last-child:hover{
+    color: black;
+}
+
+
+.header-text{
+    padding-top: 15%;
+    margin-left: 65px;
+    margin-right: 10px;
+    
+    justify-content: space-between;
+}
+
+
+.header-text-link{
+    font-size: 17.5px;
+    line-height: 50px;
+    color: #F9F3F3;
+}
+
+.heading{
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #F9F3F3;
+}
+
+.hero-illustration{
+    text-align: end;
+    margin-top: -30px;
+    padding-bottom: 80px;
+}
+
+.hero-illustration-img{
+    width: 612.75px;
+    height: 358.8px;
+}
+
+.main-btn-contairner{
+    margin-top: 10%;
+    text-align: start;
+    
+}
+
+.main-btn:hover{
+    color: lightgray;
+    text-decoration: none;
+}
+
+.main-btn{
+    background: linear-gradient(270deg, #F30C0C -14.42%, #FF098E 114.9%);
+    border-radius: 28px;
+    
+    font-weight: bold;
+    font-size: 21.88px;
+    text-transform: uppercase;
+    color: #F2F2F2;
+    
+    padding: 12px 30px;
+    
+    
+}
+
+
+/* header style end */
+ 
+
+
+/* solution cards style */
+
+.solution-sections{
+    
+    max-width: 80%;
+    margin-left: 10%;
+    
+}
+
+.solutions-cards{
+    justify-content: center;
+    
+    display: wrap;
+    flex-wrap: nowrap;
+}
+ 
+
+.section-card{
+ width:300;
+  height:auto;
+
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(72, 0, 189, 0.1);
+    border-radius: 5px;
+    transform: translateY(-25%);
+   
+    margin: 10px;
+}
+
+
+.section-icon{
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+.section-heading{
+    
+    font-size: 17.5px;
+    text-align: center;
+    color: black;
+    
+    padding-bottom: 15px;
+}
+
+.section-heading-link{
+    color: black;
+    
+   
+    
+}
+
+.discover-more{
+    font-weight: 600;
+    font-size: 18.88px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #252437;  
+    text-align: end;
+    margin-right: -20.5px;
+    margin-top: -25px;
+}
+
+/* solution cards style end */
+
+
+
+/* app-info style */
+
+.app-info{
+   margin-left: 10%;
+   margin-right: 10%;
+   justify-content: center;
+}
+
+.app-info-card{
+    margin-top: 111px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.phone-mockup{
+   text-align: center;
+   visibility: hidden;
+
+}
+
+.app-info-content{
+    margin-top: 10%;
+}
+
+.app-info-header-logo{
+    font-size: 34.18px;
+    line-height: 45px;
+    color: #000000;
+}
+
+.app-info-content-text{
+    font-size: 21.88px;
+    line-height: 29px;
+    color: #4F4F4F;
+    margin-left: 15px;
+    margin-top: 26px;
+    text-align: justify;
+}
+
+
+.app-info-list{
+    margin-top: 24px; 
+}
+
+.app-info-list-item{    
+   text-decoration: none;
+   list-style-image: url(line.svg);
+   list-style-position: outside;
+}
+
+.app-info-link{
+   font-size: 21.88px;
+   line-height: 40px;
+   color: #4F4F4F;
+}
+
+.view-case-study{
+    margin-top: 30px;
+    text-align: end;
+}
+
+.view-case-study-btn{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #F70B44;
+    
+    border-color: #F70B44;
+    border-radius: 26px;
+    padding: 12px 23px;
+    
+}
+
+.view-case-study-btn :hover{
+    background: linear-gradient(270deg, #F30C0C -14.42%, #FF098E 114.9%);
+}
+/* app-info style end*/
+
+
+
+/* process-section style */
+
+.process-section{
+    max-width: 2560px;
+    height: auto;
+    margin-left: 31.56px;
+    margin-right: 31.56px;
+    margin-top: 90px;
+
+    background: #FAFAFF;
+    border-radius: 38px;
+    visibility: hidden;
+}
+
+.process-section-header{
+    font-size: 21.88px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #252437;
+    
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+.process-section-cards{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.process-section-card{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-card-heading{
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+    margin-top: 30px;
+
+}
+
+.discover-our-process-btn{
+    background: linear-gradient(270deg, #F30C0C -14.42%, #FF098E 114.9%);
+    border-radius: 28px;
+    padding: 13px 30px;
+    margin-bottom: 50px;
+}
+.discover-our-process-link{
+    font-weight: bold;
+    font-size: 21.88px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #F2F2F2;
+}
+
+.discover-our-process-btn-container{
+    text-align: center;
+}
+
+/* process-section style end */
+
+
+
+
+/* our-ground-rules style */
+
+.our-ground-rules{
+    margin-top: 80px;
+    margin-bottom: 140px;
+    margin-left: 17%;
+    margin-right: 17%;
+    justify-content: center;
+}
+
+.our-ground-rules-header{
+    font-size: 34.18px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.our-ground-rules-menu{
+    visibility: hidden;   
+    
+    text-indent: 8%;
+    margin-top: 30px;
+    list-style-image: url(ListMarker.svg);
+    list-style-position: inside;
+    
+   ;
+}
+
+.our-ground-rules-menu-item{
+    font-size: 21.88px;
+    line-height: 29px;
+    color: #000000;
+    
+    border-bottom: 1px solid #E0E0E0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* our-ground-rules style end */
+
+
+
+/* clients-results style */
+
+.clients-results{
+    text-align: center;
+}
+  
+.clients-results-heading{
+    font-size: 34.18px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.carousel-control-prev-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%6db3b7' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%6db3b7' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 30px;
+    
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+       
+}
+
+.carousel-indicators .active {
+    background-color: red;
+}
+
+#carouselExampleIndicators{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.client-card{
+    border: none;
+    text-align: justify;
+    padding-left: 20%;
+}
+
+.client-card-title{
+    font-weight: 600;
+    font-size: 17.5px;
+    line-height: 23px;
+    color: #000000;
+    padding-top: 25px;
+}
+
+.client-card-text{
+    font-size: 17.5px;
+    line-height: 23px;
+    color: #4F4F4F;
+    text-align: justify;
+    
+    
+   padding-bottom: 30px;
+}
+
+/* clients-results style end */
+
+
+
+/* writing message style */
+
+.writing-message{
+    background: #FAFAFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 38px;
+    
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 6% 7%;
+    
+    transform: translateY(10%);
+}
+
+.writing-message-body{
+    padding-top: 8%;
+}
+
+.writing-message-heading{
+    font-weight: bold;
+    font-size: 34.18px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.writing-message-text{
+    font-size: 21.88px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 20px;
+
+}
+
+.message-form{
+    font-size: 17.5px;
+    line-height: 23px;
+    color: #000000;
+
+}
+
+
+
+.form-item {
+  position: relative;
+  padding-top: 37px;
+  padding-bottom: 15px;
+    
+   font-size: 17.5px;
+   line-height: 23px;
+   color: #000000; 
+    
+   background: #FAFAFF;
+}
+
+label {
+  position: absolute;
+  left: 10px;
+  top: 43px;
+  transition: top 0.3s;
+    
+  cursor: text;
+}
+
+input,
+textarea {
+  background: #FAFAFF;
+    
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  
+ border-top: none;   
+ border-right: none;   
+ border-left: none;   
+ border-bottom: 1px solid #BCBCBC;;   
+}
+
+
+input:focus,
+textarea:focus {
+  outline: none;
+  transition-duration: 0.3s;
+  
+}
+
+input:focus+label,
+input:not(:placeholder-shown)+label,
+textarea:focus+label,
+textarea:not(:placeholder-shown)+label {
+  top: 10px;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+
+#message{
+    height: 34px;
+}
+
+.send-message-btn{
+    background: linear-gradient(270deg, #F30C0C -14.42%, #FF098E 114.9%);
+    border-radius: 28px;
+    
+    padding: 12px 25px;
+    margin-top: 16px;
+   
+}
+
+.send-message-btn-link:hover{
+    color: lightgray;
+    text-decoration: none;
+}
+
+.send-message-btn-link{
+    font-weight: bold;
+    font-size: 21.88px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #F2F2F2;
+}
+
+.send-message-btn-container{
+    text-align: end;
+}
+
+/* writing message style end */
+
+
+
+/* footer style */
+
+.footer{
+    background: #252437;
+}
+
+.footer-logo{
+    padding-top: 15%;
+    padding-left: 8%;
+}
+
+.logo-signature{
+    padding-top: 7%;
+}
+
+.footer-solutions{
+    padding-top: 10%;
+    padding-left: 15%;
+    line-height: 40px;
+}
+
+
+.logo-signature, .footer-solutions-link{
+    font-size: 17.5px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.about-us-and-blog{
+    padding-left: 15%;
+    padding-top: 5%;
+    line-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-us{
+    padding-bottom: 40px;
+    
+}
+
+.about-us-list{ 
+    width: 100%;
+    
+}
+.blog{
+    padding-bottom: 20px;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog-list{
+    width: 100%;
+    
+}
+
+.about-us-link, .blog-list-link{
+    font-weight: bold;
+    font-size: 17.5px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.about-us-list-item, .blog-list-item{    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-us-list-item:last-child, .blog-list-item:last-child{    
+    border-bottom: none;
+}
+
+.about-us-link:hover, .blog-list-link:hover{
+    color:lightgray;  
+    
+    text-decoration: none;
+}
+
+
+.footer-solutions-link:hover{
+     padding-left: 10px;
+    transition: padding-left 1s;
+     
+     color:white;
+     text-decoration: none;
+} 
+
+.solutions-list-item:hover{
+     list-style-image: url(right-arrow.svg);
+     transition: list-style-image 1s;
+}
+
+.footer-vector-facebook-linkedin{
+     padding-right: 7%;
+     margin-left: 31%;
+     margin-top: 20px;
+}
+
+.gmail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+    margin-bottom: 15px;
+    margin-left: 13%;
+}
+
+.gmail-link{
+    font-size: 17.5px;
+    color: #FFFFFF;
+}
+
+.gmail-link:hover{
+    color: #FFFFFF;
+}
+
+.facebook-linkedin{
+    text-align: end;
+    margin-top: 15px;
+    margin-left: 13%;
+    padding-bottom: 25px;
+}
+
+.linkedin-link{
+    padding-left: 11px;
+}
+
+
+/* footer style end */
+
+
+
+
+/*let's talk*/
+
+.header-wrapper2{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header-logo2{
+    Font-Family: Overpass;
+    Font-Size: 22px;
+    Line-Height: 34px;
+    color: #252437;
+    padding: 20px 15px;
+}
+
+.nav-link2{
+    Font-Size: 17.5px;
+    Line-Height: 23px;
+    color: #252437;
+}
+
+.nav-item2{
+    padding: 20px 15px;
+}
+
+.header-logo2:hover{
+    text-decoration: none; 
+     color: #252437;
+}
+
+.nav-link2:hover {
+    text-decoration: none;
+    color:gray;
+}
+
+.writing-message2{
+    padding-top: 130px;
+    text-align: center;
+    
+}
+
+.writing-message-heading2{
+    font-weight: bold;
+    Font-Size: 34.18px;
+    Line-Height: 45px;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.writing-message-text2{
+    padding-bottom: 15px;
+    Font-Size: 21.88px;
+    color: #4F4F4F;
+}
+
+.message-form2{
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.location-email{
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 2%;
+    
+}
+
+.location, .email{
+    Font-Size: 17.5px;
+    Line-Height: 21px;
+    color: #000000;
+    padding: 20px;
+    
+}
+
+.email-location-icon{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.lets-talk-text{
+    padding: 7% 20%;
+    text-align: justify;
+    Font-Size: 21.88px;
+    Line-Height: 40px;
+    color: #000000;
+    
+    background: #FAFAFF;
+    border-radius: 38px;
+    
+    margin: 35px; 
+}
+
+/*let's talk end*/
+
+
+/*about us style*/
+
+.about-us-container{
+    padding-top: 130px;
+}
+
+.about-us-heading{
+    font-weight: 600;
+    font-size: 34.18px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F2F2F2;
+    
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-left:14%;
+    margin-right:14%;
+    text-align: center;
+    
+    background: linear-gradient(247.6deg, #1342E8 -9.74%, #9F2DF8 132.38%);
+    border-radius: 40px;
+}
+
+.about-us-tex-container{
+   margin: 3% 17% 1%;
+    
+   
+}
+
+.about-us-title{
+    font-weight: 600;
+    font-size: 21.88px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #000000;
+    
+    margin-bottom: 20px;
+
+}
+
+.about-us-text{
+    font-size: 21.88px;
+    color: #4F4F4F;
+    
+    padding-bottom: 30px;
+    
+    text-align: justify;
+}
+
+
+.group-photos-container{
+    margin: 7%;
+     text-align: center;
+}
+
+.our-team{ 
+    margin: 5% 15%; 
+    justify-content: center;
+}
+
+.our-team-header{
+    font-size: 34.18px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.member-photo{
+    text-align: center;
+}
+
+.specialty{
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.we-can-build-heading{
+    text-align: center;
+    
+    font-weight: bold;
+    font-size: 34.18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.we-can-build-text{
+    text-align: center;
+    text-align: justify;
+    
+    font-size: 21.88px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    
+    margin-top: 25px;
+    margin-bottom: 35px;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/*about us end*/
+
+
+/*Solutions style*/
+
+.solutions-container{
+    width: 80%;       
+    margin-left: 10%;
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.solutions-card-col{
+   border: 1px solid #E0E0E0;
+   width:313px;
+   height:270px;
+       
+   margin: 0;
+}
+
+.solutions-card{
+    
+}
+
+.solutions-icon1{
+    margin-top: 50px;
+    margin-bottom: 55px;
+    text-align: center;
+        
+}
+
+.solutions-icon{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    text-align: center;
+    
+    
+}
+
+.solutions-heading{
+    font-size: 17.5px;
+    line-height: 23px;
+    color: #000000;
+    text-align: center;
+}
+
+.solutions-heading-link{
+    color: black;
+}
+
+
+/*Solutions style end*/
+
+
+
+@media (max-width: 600px){
+    
+/* header style */    
+    .header-text{
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+    .header-text-link{
+    font-size: 14px;
+        
+}
+    .heading{
+    font-size: 25px;
+    line-height: 120%;
+    
+}
+    .hero-illustration{
+    display: none;
+}
+    .main-btn-contairner{
+    margin-top: 130px;
+    text-align: center;
+    
+} 
+    .main-btn{
+    margin-left: 0;
+} 
+/* header style end */
+ 
+
+/* solution-section style */    
+    
+    .section-icon{
+     width:60%;
+     height: auto;
+     margin: 35px 25px;
+     text-align: center; 
+    } 
+
+/* solution-section style end*/   
+
+    
+/* clients-results style */
+        
+    .client-card-img{
+        max-width: 100%;
+}
+    
+    .client-card-title{
+        text-align: center;
+}
+    .client-card-img-col{
+        
+        text-align: center;
+        padding-bottom: 15px;
+}
+
+/* clients-results style end */
+
+/* writing message style */
+    
+    .send-message-btn-container{
+    text-align: center;
+}
+
+/* writing message style end */
+
+
+/* footer style */
+    
+    .footer-logo{
+    padding-top: 25%;
+}
+   
+/* footer style end */    
+    
+}
+
+
+@media (max-width: 991px){
+
+/* header style */
+    
+    .header-text{
+    padding-top: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+    .header-text-link{
+    font-size: 14px;
+        
+}
+    .heading{
+    line-height: 120%;
+    
+}
+    .hero-illustration{
+    display: none;
+}
+    
+    .main-btn-contairner{
+    text-align: center;
+       
+    
+} 
+    .main-btn{
+    margin-left: 0;
+} 
+/* header style end */
+ 
+    
+/* solution-section style */
+    
+    .hide-card{
+    display: none;
+}
+    
+    .discover-more{
+    text-align: center;
+}
+    
+/* solution-section style end*/
+
+
+  .client-card-img-col{
+        
+        text-align: center;
+        padding-top: 30px;
+}
+    
+    
+/* footer style */
+    
+    .about-us-list{
+        width: 80px;
+    }
+    
+    .blog-list{
+        margin-bottom: 40px;
+        width: 80px;
+    }
+    
+    .footer-vector-facebook-linkedin{
+    margin-left: 15px;   
+}
+    
+    .footer-vector{
+    margin-left: 13%;
+}
+.gmail{
+ 
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: flex-start;
+}
+    
+    .facebook-linkedin{
+    text-align: start;
+}  
+    
+/* footer style end */
+
+    
+/* let's talk style */
+ 
+    .email{
+        display: block;
+    }
+    
+
+/* let's talk style end */
+
+}
+
+@media (max-width: 1200px){
+
+/* header style */
+    
+    .heading{
+        font-size: 38px;
+}
+/* header style end */
+    
+ 
+    
+/* clients-results style */
+    .client-card-title{
+    padding-top: 0px;
+}
+    .client-card-img-col{
+        
+        text-align: center;
+        padding-top: 35px;
+}
+        
+/* clients-results style end*/
+    
+    .footer-vector-facebook-linkedin{
+        margin-right: 10%;
+}
+    
+    
+}
