@@ -1113,6 +1113,8 @@ textarea:focus::-webkit-input-placeholder {
     
     margin-bottom: 15px;
     margin-left: 13%;
+    
+    padding-bottom: 25px;
 }
 
 .gmail-link{
