@@ -627,7 +627,6 @@ img{
 
 .phone-mockup{
    text-align: center;
-   visibility: hidden;
 
 }
 
@@ -702,7 +701,6 @@ img{
 
     background: #FAFAFF;
     border-radius: 38px;
-    visibility: hidden;
 }
 
 .process-section-header{
@@ -775,8 +773,7 @@ img{
     color: #000000;
 }
 
-.our-ground-rules-menu{
-    visibility: hidden;   
+.our-ground-rules-menu{ 
     
     text-indent: 8%;
     margin-top: 30px;
